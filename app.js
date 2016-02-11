@@ -7,6 +7,8 @@ var routes = require("./routes/routes");
 var bodyParser = require('body-parser');
 var path = require("path");
 var http = require("http");
+var multer = require("multer");
+var upload = multer({dest: "uploads/"});
 
 // Database setup
 /*var mongo = require("mongodb").MongoClient;
@@ -41,7 +43,8 @@ if ('development' == app.get('env')) {
 }
 
 app.get("/", routes.index); // Home route
-app.get("/form", routes.forms); // Home route
+app.post("/", upload.single("user_file"), routes.submit);
+//app.get("/form", routes.forms); // Home route
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

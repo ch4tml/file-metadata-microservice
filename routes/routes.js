@@ -13,9 +13,17 @@ exports.index = function(req, res){
     });
 };
 
+exports.submit = function(req, res){
+    console.log(req.body);
+    console.log(req.file);
+};
+
+/* For forms tutorial */
+
+/*
 exports.forms = function(req, res){
     res.render("forms", {
         title: "Form Experiment",
         author: "Tom"
     });
-};
+};*/
