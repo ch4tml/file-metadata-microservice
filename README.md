@@ -8,4 +8,4 @@ Based on the example service [provided] (https://cryptic-ridge-9197.herokuapp.co
 
 ## Author 
 
-Built by [ch4tml](https://github.com/ch4tml/). Started on 10th February 2016 and finished on XXth February 2016.
+Built by [ch4tml](https://github.com/ch4tml/). Started on 10th February 2016 and finished on 11th February 2016.
