@@ -1,0 +1,35 @@
+/* Styling courtest of following tutorial */
+/* https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/My_first_HTML_form */
+form{
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+}
+
+form div + div{
+    margin-top: 1em;
+}
+
+label{
+    /* To make sure that all labels have the same size and are properly aligned */
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+}
+
+input[type="file"]{
+    display: inline-block;
+    margin: 0 auto;
+    width: 250px;
+    font: 1em sans-serif;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #999;
+}
+
+button {
+    width: 80px;
+    margin-left: 40%;
+}
