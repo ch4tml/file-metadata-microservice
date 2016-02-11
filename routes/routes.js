@@ -1,6 +1,5 @@
 "use strict";
 
-var util = require('util'); // For inspecting the results of the search
 // Database setup
 //var mongoose = require("mongoose");
 //mongoose.connect(process.env.MONGOLAB_URI || "mongodb://localhost:27017/");
@@ -14,8 +13,12 @@ exports.index = function(req, res){
 };
 
 exports.submit = function(req, res){
-    console.log(req.body);
     console.log(req.file);
+    res.end(JSON.stringify({
+        filename: req.file.originalname,
+        filesizeInBytes: req.file.size,
+        uploadedAt: new Date()
+    }));
 };
 
 /* For forms tutorial */

@@ -1,3 +1,4 @@
 .env
 /views/forms.ejs
 /public/css/formStyle.css
+/uploads

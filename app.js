@@ -8,7 +8,12 @@ var bodyParser = require('body-parser');
 var path = require("path");
 var http = require("http");
 var multer = require("multer");
-var upload = multer({dest: "uploads/"});
+var upload = multer({
+  dest: "uploads/",
+  limits: {
+    fileSize: 1000
+  }
+});
 
 // Database setup
 /*var mongo = require("mongodb").MongoClient;
@@ -26,6 +31,12 @@ mongoose.createConnection(configDB, (err) => {
 // View engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+// TODO
+/*
+ADD FILE FILTER
+ADD ERROR HANDLING
+*/
 
 // All environments
 app.set('port', process.env.PORT || 8080);
